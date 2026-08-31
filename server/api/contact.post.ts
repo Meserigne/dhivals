@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer'
+import { sendMailViaGraph } from '../utils/ms-graph-mail'
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const MAX = {
@@ -54,27 +54,18 @@ export default defineEventHandler(async (event) => {
   }
 
   const config = useRuntimeConfig()
-  const smtpUser = String(config.smtpUser || '')
-  const smtpPass = String(config.smtpPass || '')
-  const contactEmail = String(config.contactEmail || smtpUser)
+  const tenantId = String(config.msTenantId || '')
+  const clientId = String(config.msClientId || '')
+  const clientSecret = String(config.msClientSecret || '')
+  const contactEmail = String(config.contactEmail || '')
+  const fromUser = String(config.mailFromUser || contactEmail)
 
-  if (!smtpUser || !smtpPass || !contactEmail) {
+  if (!tenantId || !clientId || !clientSecret || !contactEmail || !fromUser) {
     throw createError({
       statusCode: 500,
       statusMessage: 'Envoi d’e-mail non configuré',
     })
   }
-
-  const transporter = nodemailer.createTransport({
-    host: String(config.smtpHost || 'smtp.office365.com'),
-    port: Number(config.smtpPort) || 587,
-    secure: false,
-    requireTLS: true,
-    auth: {
-      user: smtpUser,
-      pass: smtpPass,
-    },
-  })
 
   const safeName = stripHeader(name)
   const safeEmail = stripHeader(email)
@@ -122,21 +113,26 @@ export default defineEventHandler(async (event) => {
       <div style="margin-top:24px;padding:16px;background:#f8fafc;border-radius:12px;white-space:pre-wrap">
         ${escapeHtml(message)}
       </div>
+      <pre style="display:none">${escapeHtml(text)}</pre>
     </div>
   `
 
   try {
-    await transporter.sendMail({
-      from: `"Dhivals — site web" <${smtpUser}>`,
+    await sendMailViaGraph({
+      tenantId,
+      clientId,
+      clientSecret,
+      fromUser,
       to: contactEmail,
-      replyTo: `"${safeName}" <${safeEmail}>`,
+      replyToName: safeName,
+      replyToEmail: safeEmail,
       subject: `Contact Dhivals — ${safeName}`,
       text,
       html,
     })
   }
   catch (error) {
-    console.error('[contact] SMTP error', error)
+    console.error('[contact] Graph mail error', error)
     throw createError({
       statusCode: 502,
       statusMessage: 'Impossible d’envoyer le message pour le moment',

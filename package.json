@@ -13,13 +13,9 @@
   "dependencies": {
     "@nuxtjs/i18n": "^10.3.0",
     "@tailwindcss/vite": "^4.3.0",
-    "nodemailer": "^9.1.0",
     "nuxt": "^4.4.2",
     "tailwindcss": "^4.3.0",
     "vue": "^3.5.30",
     "vue-router": "^5.0.3"
-  },
-  "devDependencies": {
-    "@types/nodemailer": "^8.0.1"
   }
 }

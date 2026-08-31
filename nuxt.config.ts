@@ -5,11 +5,13 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   runtimeConfig: {
-    smtpHost: 'smtp.office365.com',
-    smtpPort: '587',
-    smtpUser: '',
-    smtpPass: '',
+    // Microsoft Graph (OAuth2 app-only) — préféré quand SMTP AUTH est désactivé
+    msTenantId: '',
+    msClientId: '',
+    msClientSecret: '',
     contactEmail: 'marianne.ngom@dhivals.com',
+    /** Boîte qui envoie via Graph (souvent la même que contactEmail). */
+    mailFromUser: 'marianne.ngom@dhivals.com',
   },
   app: {
     head: {
