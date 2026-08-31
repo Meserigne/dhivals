@@ -1,0 +1,21 @@
+{
+  "name": "dhivals",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "optimize:images": "bash scripts/optimize-images.sh",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^10.3.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "nuxt": "^4.4.2",
+    "tailwindcss": "^4.3.0",
+    "vue": "^3.5.30",
+    "vue-router": "^5.0.3"
+  }
+}

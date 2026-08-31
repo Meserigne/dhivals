@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@theme {
+  --color-dh-teal: #0d9488;
+  --color-dh-teal-dark: #0f766e;
+  --color-dh-gold: #e5b84a;
+  --color-dh-gold-deep: #c9a227;
+}
+

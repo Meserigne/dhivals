@@ -1,0 +1,192 @@
+{
+  "nav": {
+    "aria": "Main navigation",
+    "story": "Our story",
+    "services": "Our services",
+    "approach": "Our approach",
+    "why": "Why Dhivals",
+    "contact": "Contact us",
+    "ctaWork": "Work with us",
+    "switchLang": "Change language"
+  },
+  "hero": {
+    "loading": "Loading…",
+    "eyebrow": "Strategic consulting & sustainable impact",
+    "titleBefore": "Where ",
+    "titleHighlight": "vision",
+    "titleAfter": " becomes impact",
+    "lead": "Dhivals supports organisations, institutions and leaders in aligning vision, performance and impact to build a sustainable future grounded in local realities.",
+    "ctaServices": "Our services",
+    "ctaContact": "Contact us",
+    "footerTagline": "Structuring impact. Enabling change."
+  },
+  "story": {
+    "title": "Our story",
+    "subtitle": "An organisation born from a deep conviction",
+    "body": "After many years working in sustainable development, social performance and strategic advisory, Dhivals was founded to help organisations align vision, impact and performance.",
+    "quote": "Organisations create lasting value when they place people, communities and impact at the heart of their strategy.",
+    "values": {
+      "impact": {
+        "title": "Lasting impact",
+        "text": "Actions that endure and transform"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "text": "Transparency and honesty in every situation"
+      },
+      "excellence": {
+        "title": "Excellence",
+        "text": "A consistently high level of rigour"
+      },
+      "innovation": {
+        "title": "Innovation",
+        "text": "Creative solutions for complex challenges"
+      },
+      "commitment": {
+        "title": "Commitment",
+        "text": "Hands-on support alongside teams and stakeholders"
+      },
+      "transmission": {
+        "title": "Knowledge transfer",
+        "text": "Developing tomorrow's leaders"
+      }
+    }
+  },
+  "services": {
+    "eyebrow": "Our services",
+    "headline": "Turning intentions into concrete action.",
+    "callout": "Dhivals supports you at every stage of your strategic journey, from initial diagnosis through to implementation and impact evaluation.",
+    "items": {
+      "s1": {
+        "n": "01",
+        "title": "Strategy & advisory",
+        "text": "Defining and articulating your strategic vision. Issue analysis, prioritisation of actions, and a roadmap for lasting impact."
+      },
+      "s2": {
+        "n": "02",
+        "title": "Social performance & CSR",
+        "text": "Assessment of your social impact, tailored CSR policies, and measurement and reporting of performance."
+      },
+      "s3": {
+        "n": "03",
+        "title": "Leadership & transformation",
+        "text": "Support for leaders, change management, and sustainable organisational cultures."
+      },
+      "s4": {
+        "n": "04",
+        "title": "Sustainable development",
+        "text": "Design and delivery of high-impact projects. Alignment with the SDGs, green finance, and impact evaluation."
+      },
+      "s5": {
+        "n": "05",
+        "title": "Community engagement",
+        "text": "Territorial anchoring strategies and stakeholder mobilisation for inclusive growth."
+      },
+      "s6": {
+        "n": "06",
+        "title": "Training & knowledge transfer",
+        "text": "Workshops, seminars and capacity-building programmes. Skills transfer."
+      }
+    }
+  },
+  "approach": {
+    "title": "Our approach",
+    "subtitle": "A rigorous, human and tailored method",
+    "summary": "Every engagement starts with deep listening. We co-build solutions with you that are grounded in your reality and carry transformative ambition.",
+    "items": {
+      "s1": {
+        "title": "Listening & diagnosis",
+        "text": "Full immersion in your organisation: its challenges, culture, resources and ambitions. This diagnosis is the foundation of every successful engagement."
+      },
+      "s2": {
+        "title": "Strategic co-creation",
+        "text": "We co-create a clear vision and tailored strategies with your teams. Stakeholder ownership is at the heart of our method."
+      },
+      "s3": {
+        "title": "Implementation & support",
+        "text": "We stay by your side during execution. Our support ensures consistency between strategic intent and on-the-ground reality."
+      },
+      "s4": {
+        "title": "Evaluation & impact",
+        "text": "We measure, learn and adjust. Continuous impact evaluation helps build on successes and steadily improve outcomes."
+      }
+    }
+  },
+  "whyDhivals": {
+    "title": "Why Dhivals?",
+    "tagline": "Shaping Sustainable Futures",
+    "body": "We believe performance and impact are not opposites. Organisations that put human values at the heart of their strategy are the ones that last and inspire.",
+    "cta": "Start a project",
+    "imageAlt": "People working on a laptop",
+    "items": {
+      "s1": {
+        "label": "Vision",
+        "line": "Global & strategic"
+      },
+      "s2": {
+        "label": "Anchoring",
+        "line": "Local realities"
+      },
+      "s3": {
+        "label": "Impact",
+        "line": "Lasting & tangible"
+      }
+    }
+  },
+  "contactSection": {
+    "eyebrow": "Contact us",
+    "heading": "Let's work together...",
+    "lead": "Ready to turn your vision into impact? Let's talk about your project. Every engagement starts with a conversation.",
+    "fields": {
+      "name": "Full name",
+      "organization": "Organisation",
+      "email": "Email",
+      "type": "Type of support",
+      "message": "Your message"
+    },
+    "placeholderMessage": "Your message here",
+    "typePlaceholder": "Select…",
+    "types": {
+      "t1": "Strategy & advisory",
+      "t2": "Social performance & CSR",
+      "t3": "Sustainable development & impact",
+      "t4": "Training & knowledge transfer",
+      "t5": "Other request"
+    },
+    "submit": "Send message",
+    "thanks": "Thank you for your message. We will get back to you very soon.",
+    "sendAnother": "Send another message",
+    "errors": {
+      "required": "Please fill in your name, email and message.",
+      "email": "Please enter a valid email address."
+    }
+  },
+  "footer": {
+    "aria": "Site footer",
+    "searchPlaceholder": "Search",
+    "searchAria": "Search the site",
+    "columns": {
+      "company": "Company",
+      "settings": "Settings",
+      "explore": "Explore"
+    },
+    "links": {
+      "story": "Our story",
+      "services": "Our services",
+      "approach": "Our approach",
+      "why": "Why Dhivals",
+      "terms": "Terms of use",
+      "privacy": "Privacy",
+      "cookies": "Cookies",
+      "resources": "Resources",
+      "blog": "Blog",
+      "documents": "Documents"
+    },
+    "social": {
+      "facebook": "Dhivals on Facebook",
+      "twitter": "Dhivals on X",
+      "instagram": "Dhivals on Instagram",
+      "linkedin": "Dhivals on LinkedIn"
+    }
+  }
+}
