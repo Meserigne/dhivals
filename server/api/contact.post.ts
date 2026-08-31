@@ -69,20 +69,32 @@ export default defineEventHandler(async (event) => {
 
   const safeName = stripHeader(name)
   const safeEmail = stripHeader(email)
-  const orgLine = organization || '—'
-  const typeLine = type || '—'
+  const orgLine = organization
+  const typeLine = type
 
-  const text = [
+  const textLines = [
     `Nouveau message depuis le site Dhivals`,
     '',
     `Nom : ${safeName}`,
-    `Organisation : ${orgLine}`,
-    `E-mail : ${safeEmail}`,
-    `Type d’accompagnement : ${typeLine}`,
-    '',
-    'Message :',
-    message,
-  ].join('\n')
+  ]
+  if (orgLine) textLines.push(`Organisation : ${orgLine}`)
+  textLines.push(`E-mail : ${safeEmail}`)
+  if (typeLine) textLines.push(`Type d’accompagnement : ${typeLine}`)
+  textLines.push('', 'Message :', message)
+  const text = textLines.join('\n')
+
+  const orgRow = orgLine
+    ? `<tr>
+          <td style="padding:8px 0;color:#64748b">Organisation</td>
+          <td style="padding:8px 0">${escapeHtml(orgLine)}</td>
+        </tr>`
+    : ''
+  const typeRow = typeLine
+    ? `<tr>
+          <td style="padding:8px 0;color:#64748b">Accompagnement</td>
+          <td style="padding:8px 0">${escapeHtml(typeLine)}</td>
+        </tr>`
+    : ''
 
   const html = `
     <div style="font-family:Georgia,serif;color:#0f172a;line-height:1.6">
@@ -95,20 +107,14 @@ export default defineEventHandler(async (event) => {
           <td style="padding:8px 0;color:#64748b;width:180px">Nom</td>
           <td style="padding:8px 0;font-weight:600">${escapeHtml(safeName)}</td>
         </tr>
-        <tr>
-          <td style="padding:8px 0;color:#64748b">Organisation</td>
-          <td style="padding:8px 0">${escapeHtml(orgLine)}</td>
-        </tr>
+        ${orgRow}
         <tr>
           <td style="padding:8px 0;color:#64748b">E-mail</td>
           <td style="padding:8px 0">
             <a href="mailto:${escapeHtml(safeEmail)}" style="color:#0f766e">${escapeHtml(safeEmail)}</a>
           </td>
         </tr>
-        <tr>
-          <td style="padding:8px 0;color:#64748b">Accompagnement</td>
-          <td style="padding:8px 0">${escapeHtml(typeLine)}</td>
-        </tr>
+        ${typeRow}
       </table>
       <div style="margin-top:24px;padding:16px;background:#f8fafc;border-radius:12px;white-space:pre-wrap">
         ${escapeHtml(message)}
@@ -126,7 +132,7 @@ export default defineEventHandler(async (event) => {
       to: contactEmail,
       replyToName: safeName,
       replyToEmail: safeEmail,
-      subject: `Contact Dhivals — ${safeName}`,
+      subject: `Contact Dhivals : ${safeName}`,
       text,
       html,
     })

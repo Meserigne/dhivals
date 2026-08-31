@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   runtimeConfig: {
-    // Microsoft Graph (OAuth2 app-only) — préféré quand SMTP AUTH est désactivé
+    // Microsoft Graph (OAuth2 app-only) - préféré quand SMTP AUTH est désactivé
     msTenantId: '',
     msClientId: '',
     msClientSecret: '',

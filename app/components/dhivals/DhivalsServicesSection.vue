@@ -16,7 +16,7 @@ const cards = computed<ServiceCard[]>(() =>
 /**
  * Animation au scroll, distincte de « Notre histoire » :
  * - Histoire : `translate-y` (vertical) + opacité
- * - Services : `translate-x` (horizontal, depuis la droite) + opacité — pas de translation verticale
+ * - Services : `translate-x` (horizontal, depuis la droite) + opacité - pas de translation verticale
  */
 const servicesGridInView = ref<boolean | null>(null)
 const prefersReducedMotion = ref(false)

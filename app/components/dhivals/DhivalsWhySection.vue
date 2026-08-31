@@ -27,7 +27,7 @@ const contentRevealed = computed(() => {
   return true
 })
 
-/** Slots : 0 = en-tête, 1 = visuel + CTA, 2–4 = points (vision, éclairage, etc.) */
+/** Slots : 0 = en-tête, 1 = visuel + CTA, 2-4 = points (vision, éclairage, etc.) */
 function staggerDelay(slot: number): string | undefined {
   if (prefersReducedMotion.value) return undefined
   if (!contentRevealed.value) return '0ms'
