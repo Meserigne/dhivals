@@ -4,6 +4,13 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  runtimeConfig: {
+    smtpHost: 'smtp.office365.com',
+    smtpPort: '587',
+    smtpUser: '',
+    smtpPass: '',
+    contactEmail: 'marianne.ngom@dhivals.com',
+  },
   app: {
     head: {
       link: [

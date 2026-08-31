@@ -154,11 +154,13 @@
       "t5": "Autre demande"
     },
     "submit": "Envoyer le message",
+    "sending": "Envoi en cours…",
     "thanks": "Merci pour votre message. Nous vous recontactons très bientôt.",
     "sendAnother": "Envoyer un autre message",
     "errors": {
       "required": "Merci de renseigner au moins votre nom, votre e-mail et votre message.",
-      "email": "Merci d'indiquer une adresse e-mail valide."
+      "email": "Merci d'indiquer une adresse e-mail valide.",
+      "send": "L'envoi a échoué. Merci de réessayer dans un instant."
     }
   },
   "footer": {

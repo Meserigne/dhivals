@@ -14,14 +14,17 @@ const form = reactive({
 })
 
 const submitted = ref(false)
+const sending = ref(false)
 const formError = ref('')
+const website = ref('')
 
 function resetFeedback() {
   formError.value = ''
 }
 
-function onSubmit() {
+async function onSubmit() {
   resetFeedback()
+  if (sending.value) return
   if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
     formError.value = t('contactSection.errors.required')
     return
@@ -31,14 +34,38 @@ function onSubmit() {
     formError.value = t('contactSection.errors.email')
     return
   }
-  submitted.value = true
-  Object.assign(form, {
-    name: '',
-    organization: '',
-    email: '',
-    type: '',
-    message: '',
-  })
+
+  sending.value = true
+  try {
+    await $fetch('/api/contact', {
+      method: 'POST',
+      body: {
+        name: form.name.trim(),
+        organization: form.organization.trim(),
+        email: form.email.trim(),
+        type: form.type
+          ? t(`contactSection.types.${form.type}`)
+          : '',
+        message: form.message.trim(),
+        website: website.value,
+      },
+    })
+    submitted.value = true
+    Object.assign(form, {
+      name: '',
+      organization: '',
+      email: '',
+      type: '',
+      message: '',
+    })
+    website.value = ''
+  }
+  catch {
+    formError.value = t('contactSection.errors.send')
+  }
+  finally {
+    sending.value = false
+  }
 }
 </script>
 
@@ -126,6 +153,17 @@ function onSubmit() {
               {{ formError }}
             </p>
 
+            <div class="hidden" aria-hidden="true">
+              <label for="contact-website">Website</label>
+              <input
+                id="contact-website"
+                v-model="website"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+              >
+            </div>
+
             <div>
               <label
                 for="contact-name"
@@ -210,7 +248,8 @@ function onSubmit() {
 
             <button
               type="submit"
-              class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-slate-900 px-8 py-4 text-sm font-semibold text-white shadow-md transition hover:bg-slate-800 sm:text-base"
+              class="inline-flex w-full items-center justify-center gap-2 rounded-full bg-slate-900 px-8 py-4 text-sm font-semibold text-white shadow-md transition hover:bg-slate-800 disabled:cursor-wait disabled:opacity-70 sm:text-base"
+              :disabled="sending"
             >
               <svg
                 class="h-5 w-5 shrink-0"
@@ -226,7 +265,7 @@ function onSubmit() {
                   stroke-linejoin="round"
                 />
               </svg>
-              {{ t('contactSection.submit') }}
+              {{ sending ? t('contactSection.sending') : t('contactSection.submit') }}
             </button>
           </form>
         </div>
