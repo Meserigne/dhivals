@@ -7,12 +7,12 @@ Dhivals accompagne les organisations, institutions et leaders à aligner vision,
 Tagline : "Structuring impact. Enabling change." / "Shaping Sustainable Futures".
 
 Services :
-1. Stratégie & Conseil — vision stratégique, priorisation, feuille de route
-2. Performance Sociale & RSE — diagnostic d'impact, politiques RSE, reporting
-3. Leadership & Transformation — accompagnement des dirigeants, changement culturel
-4. Développement Durable — projets à fort impact, ODD, financement vert, évaluation
-5. Engagement Communautaire — ancrage territorial, mobilisation des parties prenantes
-6. Formation & Transmission — ateliers, séminaires, renforcement de capacités
+1. Stratégie & Conseil : vision stratégique, priorisation, feuille de route
+2. Performance Sociale & RSE : diagnostic d'impact, politiques RSE, reporting
+3. Leadership & Transformation : accompagnement des dirigeants, changement culturel
+4. Développement Durable : projets à fort impact, ODD, financement vert, évaluation
+5. Engagement Communautaire : ancrage territorial, mobilisation des parties prenantes
+6. Formation & Transmission : ateliers, séminaires, renforcement de capacités
 
 Approche en 4 étapes :
 1. Écoute & Diagnostic
