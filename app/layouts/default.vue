@@ -16,9 +16,22 @@ const pageUrl = computed(() => {
   return `${siteUrl}/`
 })
 
+const pageTitle = computed(() => t('seo.pageTitle'))
+const pageDescription = computed(() => t('seo.description'))
+
 useHead(() => {
   const verification = String(config.public.googleSiteVerification || '').trim()
-  const meta = [...(i18nHead.value.meta || [])]
+  const meta = [...(i18nHead.value.meta || [])].filter((item) => {
+    const name = 'name' in item ? String(item.name || '') : ''
+    const property = 'property' in item ? String(item.property || '') : ''
+    // Keep hreflang-related locale tags; drop weak default titles from i18n head
+    return !(
+      name === 'description' ||
+      property === 'og:title' ||
+      property === 'og:description' ||
+      property === 'og:url'
+    )
+  })
   if (verification) {
     meta.push({
       name: 'google-site-verification',
@@ -31,9 +44,12 @@ useHead(() => {
       ...i18nHead.value.htmlAttrs,
       lang: locale.value === 'en' ? 'en' : 'fr',
     },
-    title: t('seo.title'),
+    title: pageTitle.value,
+    titleTemplate: '%s',
     link: [
-      ...(i18nHead.value.link || []),
+      ...(i18nHead.value.link || []).filter(
+        (l) => !('rel' in l && l.rel === 'canonical'),
+      ),
       { rel: 'canonical', href: pageUrl.value },
     ],
     meta,
@@ -47,7 +63,7 @@ useHead(() => {
           url: siteUrl,
           logo: `${siteUrl}/assets/logo.png`,
           email: 'marianne.ngom@dhivals.com',
-          description: t('seo.description'),
+          description: pageDescription.value,
         }),
       },
     ],
@@ -55,20 +71,19 @@ useHead(() => {
 })
 
 useSeoMeta({
-  title: () => t('seo.title'),
-  description: () => t('seo.description'),
-  ogTitle: () => t('seo.title'),
-  ogDescription: () => t('seo.description'),
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
   ogType: 'website',
   ogUrl: pageUrl,
   ogLocale: () => (locale.value === 'en' ? 'en_US' : 'fr_FR'),
   ogImage,
   ogImageAlt: () => t('seo.ogAlt'),
   twitterCard: 'summary_large_image',
-  twitterTitle: () => t('seo.title'),
-  twitterDescription: () => t('seo.description'),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
   twitterImage: ogImage,
-  // Avoid leaking preview host in social cards
   robots: () =>
     requestURL.hostname.includes('vercel.app') ? 'noindex,follow' : 'index,follow',
 })
