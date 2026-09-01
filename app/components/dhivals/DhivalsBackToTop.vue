@@ -47,7 +47,7 @@ onBeforeUnmount(() => {
     <button
       v-show="visible"
       type="button"
-      class="fixed bottom-6 right-4 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-dh-teal text-white shadow-lg ring-1 ring-black/5 transition hover:bg-dh-teal-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dh-teal sm:bottom-8 sm:right-8"
+      class="fixed bottom-6 right-[5.5rem] z-50 flex h-12 w-12 items-center justify-center rounded-full bg-slate-900 text-white shadow-lg ring-1 ring-black/5 transition hover:bg-slate-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dh-teal sm:bottom-8 sm:right-[6.5rem]"
       :aria-label="t('nav.backToTop')"
       @click="goHome"
     >

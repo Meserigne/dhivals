@@ -16,6 +16,23 @@
     "linkedin": "Dhivals sur LinkedIn",
     "backToTop": "Remonter en haut de la page"
   },
+  "chat": {
+    "open": "Ouvrir l’assistant Dhivals",
+    "close": "Fermer l’assistant",
+    "title": "Assistant Dhivals",
+    "subtitle": "Questions sur nos services et notre approche",
+    "welcome": "Bonjour ! Je peux vous expliquer les services Dhivals, notre méthode, et vous orienter vers le formulaire de contact.",
+    "placeholder": "Votre question…",
+    "send": "Envoyer",
+    "thinking": "Réflexion en cours…",
+    "error": "Impossible de répondre pour le moment. Réessayez, ou utilisez le formulaire de contact.",
+    "ctaContact": "Parler à l’équipe via le formulaire",
+    "suggestions": {
+      "s1": "Quels sont vos services ?",
+      "s2": "Comment se déroule un accompagnement ?",
+      "s3": "Comment vous contacter ?"
+    }
+  },
   "hero": {
     "loading": "Chargement…",
     "eyebrow": "Conseil stratégique & Impact durable",

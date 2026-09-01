@@ -11,11 +11,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@ai-sdk/vue": "^4.0.87",
     "@nuxtjs/i18n": "^10.3.0",
     "@tailwindcss/vite": "^4.3.0",
+    "ai": "^7.0.87",
     "nuxt": "^4.4.2",
     "tailwindcss": "^4.3.0",
     "vue": "^3.5.30",
-    "vue-router": "^5.0.3"
+    "vue-router": "^5.0.3",
+    "zod": "^4.5.4"
   }
 }

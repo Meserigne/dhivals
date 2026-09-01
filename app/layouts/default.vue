@@ -97,5 +97,6 @@ useSeoMeta({
     </div>
     <DhivalsSiteFooter />
     <DhivalsBackToTop />
+    <DhivalsChatWidget />
   </div>
 </template>

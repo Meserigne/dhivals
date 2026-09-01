@@ -16,6 +16,23 @@
     "linkedin": "Dhivals on LinkedIn",
     "backToTop": "Back to top"
   },
+  "chat": {
+    "open": "Open the Dhivals assistant",
+    "close": "Close the assistant",
+    "title": "Dhivals assistant",
+    "subtitle": "Questions about our services and approach",
+    "welcome": "Hello! I can explain Dhivals services, our method, and guide you to the contact form.",
+    "placeholder": "Your question…",
+    "send": "Send",
+    "thinking": "Thinking…",
+    "error": "Unable to reply right now. Please try again, or use the contact form.",
+    "ctaContact": "Talk to the team via the form",
+    "suggestions": {
+      "s1": "What services do you offer?",
+      "s2": "How does an engagement work?",
+      "s3": "How can I contact you?"
+    }
+  },
   "hero": {
     "loading": "Loading…",
     "eyebrow": "Strategic consulting & sustainable impact",
