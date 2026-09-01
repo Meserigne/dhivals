@@ -64,6 +64,7 @@ useHead(() => {
           logo: `${siteUrl}/assets/logo.png`,
           email: 'marianne.ngom@dhivals.com',
           description: pageDescription.value,
+          sameAs: ['https://www.linkedin.com/company/dhivals/'],
         }),
       },
     ],

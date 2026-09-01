@@ -9,7 +9,7 @@ const SOCIAL = {
   facebook: '#',
   twitter: '#',
   instagram: '#',
-  linkedin: '#',
+  linkedin: 'https://www.linkedin.com/company/dhivals/',
 } as const
 
 function homeHash(hash: string) {
