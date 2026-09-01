@@ -4,13 +4,7 @@ const localePath = useLocalePath()
 
 const LOGO_SRC = '/assets/logo.png'
 
-/** Renseigner les URLs réelles des réseaux sociaux. */
-const SOCIAL = {
-  facebook: '#',
-  twitter: '#',
-  instagram: '#',
-  linkedin: 'https://www.linkedin.com/company/dhivals/',
-} as const
+const LINKEDIN_URL = 'https://www.linkedin.com/company/dhivals/'
 
 function homeHash(hash: string) {
   return `${localePath({ name: 'index' })}${hash}`
@@ -36,12 +30,9 @@ const exploreLinks = [
 ] as const
 
 const socials = [
-  { key: 'facebook', href: SOCIAL.facebook, labelKey: 'footer.social.facebook' },
-  { key: 'twitter', href: SOCIAL.twitter, labelKey: 'footer.social.twitter' },
-  { key: 'instagram', href: SOCIAL.instagram, labelKey: 'footer.social.instagram' },
-  { key: 'linkedin', href: SOCIAL.linkedin, labelKey: 'footer.social.linkedin' },
-] as const
-</script>
+  { key: 'instagram', href: '#', labelKey: 'footer.social.instagram' },
+  { key: 'linkedin', href: LINKEDIN_URL, labelKey: 'footer.social.linkedin' },
+] as const</script>
 
 <template>
   <footer
@@ -159,33 +150,9 @@ const socials = [
                 :aria-label="t(s.labelKey)"
               >
                 <span class="sr-only">{{ t(s.labelKey) }}</span>
-                <!-- facebook -->
-                <svg
-                  v-if="s.key === 'facebook'"
-                  class="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M14 13.5h2.5l1-4H14v-1.5c0-1 .3-1.9 1.9-1.9H17V3.1c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8V9.5H7v4h2.5V21h4V13.5Z"
-                  />
-                </svg>
-                <!-- twitter / X -->
-                <svg
-                  v-else-if="s.key === 'twitter'"
-                  class="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                  />
-                </svg>
                 <!-- instagram -->
                 <svg
-                  v-else-if="s.key === 'instagram'"
+                  v-if="s.key === 'instagram'"
                   class="h-4 w-4"
                   viewBox="0 0 24 24"
                   fill="none"
