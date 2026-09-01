@@ -9,12 +9,10 @@ const input = ref('')
 const panelRef = ref<HTMLElement | null>(null)
 const listRef = ref<HTMLElement | null>(null)
 
-const { messages, sendMessage, status, error, clearError } = useChat({
-  api: '/api/chat',
-})
+const { messages, sendMessage, status, error, clearError } = useChat()
 
 const busy = computed(
-  () => status.value === 'generating' || status.value === 'streaming',
+  () => status.value === 'submitted' || status.value === 'streaming',
 )
 
 const suggestions = computed(() => [
