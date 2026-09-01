@@ -96,5 +96,6 @@ useSeoMeta({
       <slot />
     </div>
     <DhivalsSiteFooter />
+    <DhivalsBackToTop />
   </div>
 </template>
