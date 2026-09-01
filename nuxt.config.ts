@@ -12,6 +12,10 @@ export default defineNuxtConfig({
     contactEmail: 'marianne.ngom@dhivals.com',
     /** Boîte qui envoie via Graph (souvent la même que contactEmail). */
     mailFromUser: 'marianne.ngom@dhivals.com',
+    public: {
+      /** Code Search Console : contenu de google-site-verification */
+      googleSiteVerification: '',
+    },
   },
   app: {
     head: {
@@ -29,6 +33,7 @@ export default defineNuxtConfig({
   },
   modules: ['@nuxtjs/i18n'],
   i18n: {
+    baseUrl: 'https://www.dhivals.com',
     defaultLocale: 'fr',
     strategy: 'prefix_except_default',
     locales: [
