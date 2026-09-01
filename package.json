@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^4.0.53",
     "@ai-sdk/vue": "^4.0.87",
     "@nuxtjs/i18n": "^10.3.0",
     "@tailwindcss/vite": "^4.3.0",

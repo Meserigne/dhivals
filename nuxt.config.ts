@@ -12,8 +12,9 @@ export default defineNuxtConfig({
     contactEmail: 'marianne.ngom@dhivals.com',
     /** Boîte qui envoie via Graph (souvent la même que contactEmail). */
     mailFromUser: 'marianne.ngom@dhivals.com',
-    /** Vercel AI Gateway — chat assistant (NUXT_AI_GATEWAY_API_KEY) */
-    aiGatewayApiKey: '',
+    /** OpenAI / ChatGPT — chat assistant (NUXT_OPENAI_API_KEY) */
+    openaiApiKey: '',
+
     public: {
       /** Code Search Console : contenu de google-site-verification */
       googleSiteVerification: '',

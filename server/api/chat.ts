@@ -1,6 +1,6 @@
+import { createOpenAI } from '@ai-sdk/openai'
 import {
   convertToModelMessages,
-  createGateway,
   createUIMessageStreamResponse,
   streamText,
   toUIMessageStream,
@@ -11,17 +11,17 @@ import { DHIVALS_SYSTEM_PROMPT } from '../utils/dhivals-system-prompt'
 export default defineLazyEventHandler(async () => {
   const config = useRuntimeConfig()
   const apiKey =
-    String(config.aiGatewayApiKey || '').trim() ||
-    String(process.env.AI_GATEWAY_API_KEY || '').trim()
+    String(config.openaiApiKey || '').trim() ||
+    String(process.env.OPENAI_API_KEY || '').trim()
 
   if (!apiKey) {
     throw createError({
       statusCode: 500,
-      statusMessage: 'Chat IA non configuré (clé AI Gateway manquante)',
+      statusMessage: 'Chat IA non configuré (clé OpenAI manquante)',
     })
   }
 
-  const gateway = createGateway({ apiKey })
+  const openai = createOpenAI({ apiKey })
 
   return defineEventHandler(async (event) => {
     const body = await readBody(event).catch(() => null)
@@ -38,7 +38,7 @@ export default defineLazyEventHandler(async () => {
     const recent = messages.slice(-12)
 
     const result = streamText({
-      model: gateway('openai/gpt-5.4'),
+      model: openai('gpt-4o-mini'),
       system: DHIVALS_SYSTEM_PROMPT,
       messages: await convertToModelMessages(recent),
       maxOutputTokens: 500,
