@@ -22,7 +22,7 @@ Valeurs : Impact durable, Intégrité, Excellence, Innovation, Engagement, Trans
 
 Contact :
 - Formulaire sur le site : section #contact (https://www.dhivals.com/#contact)
-- E-mail : marianne.ngom@dhivals.com
+- E-mail : Pmo@dhivals.com
 - LinkedIn : https://www.linkedin.com/company/dhivals/
 
 Règles :
