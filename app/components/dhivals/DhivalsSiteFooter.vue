@@ -30,7 +30,7 @@ const exploreLinks = [
 ] as const
 
 const socials = [
-  { key: 'instagram', href: '#', labelKey: 'footer.social.instagram' },
+  { key: 'instagram', href: 'https://www.instagram.com/dhivals?utm_source=qr', labelKey: 'footer.social.instagram' },
   { key: 'linkedin', href: LINKEDIN_URL, labelKey: 'footer.social.linkedin' },
 ] as const</script>
 
