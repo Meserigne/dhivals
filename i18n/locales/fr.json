@@ -80,36 +80,31 @@
     "eyebrow": "Nos services",
     "headline": "Transformer les intentions en actions concrètes.",
     "callout": "Dhivals intervient à chaque étape de votre démarche stratégique, du diagnostic initial jusqu'à la mise en œuvre et l'évaluation de l'impact.",
+    "whatWeDo": "Ce que nous faisons",
     "items": {
       "s1": {
         "n": "01",
-        "title": "Stratégie & Conseil",
-        "text": "Définition et articulation de votre vision stratégique. Analyse des enjeux, priorisation des actions, feuille de route pour un impact durable."
+        "title": "Stratégie & Transformation",
+        "text": "Nous aidons les organisations à transformer des défis complexes en priorités claires, choix stratégiques et feuilles de route actionnables.",
+        "whatWeDo": "Développement stratégique · Intégration du développement durable · Transformation organisationnelle · Feuilles de route stratégiques"
       },
       "s2": {
         "n": "02",
-        "title": "Performance Sociale & RSE",
-        "text": "Diagnostic de votre impact social, développement de politiques RSE adaptées, mesure et reporting des performances."
+        "title": "ESG & Performance Sociale",
+        "text": "Nous aidons les organisations à renforcer la gestion des enjeux environnementaux, sociaux et parties prenantes, avec un focus sur la performance, la résilience et la création de valeur à long terme.",
+        "whatWeDo": "Stratégie ESG & durabilité · Performance sociale · Évaluation des risques et de l'impact · Cadres de performance & reporting"
       },
       "s3": {
         "n": "03",
-        "title": "Leadership & Transformation",
-        "text": "Accompagnement des dirigeants, gestion du changement et cultures organisationnelles durables."
+        "title": "Parties prenantes, Communautés & Territoires",
+        "text": "Nous aidons les organisations à renforcer leurs relations avec les parties prenantes et à créer des modèles d'engagement et de valeur locale au service de l'entreprise et des territoires.",
+        "whatWeDo": "Stratégie parties prenantes · Engagement communautaire · Ancrage territorial · Création de valeur locale · Investissement social"
       },
       "s4": {
         "n": "04",
-        "title": "Développement Durable",
-        "text": "Conception et mise en œuvre de projets à fort impact. Alignement sur les ODD, financement vert, évaluation d'impact."
-      },
-      "s5": {
-        "n": "05",
-        "title": "Engagement Communautaire",
-        "text": "Stratégies d'ancrage territorial et de mobilisation des parties prenantes pour une croissance inclusive."
-      },
-      "s6": {
-        "n": "06",
-        "title": "Formation & Transmission",
-        "text": "Ateliers, séminaires et programmes de renforcement de capacités. Transfert de compétences."
+        "title": "Leadership & Capacités",
+        "text": "Nous préparons dirigeants et équipes à naviguer le changement, prendre de meilleures décisions et traduire la stratégie en action.",
+        "whatWeDo": "Conseil aux dirigeants · Programmes de leadership · Renforcement des capacités · Ateliers & facilitation stratégique"
       }
     }
   },
@@ -171,10 +166,10 @@
     "placeholderMessage": "Votre message ici",
     "typePlaceholder": "Sélectionner…",
     "types": {
-      "t1": "Stratégie & conseil",
-      "t2": "Performance sociale & RSE",
-      "t3": "Développement durable & impact",
-      "t4": "Formation & transmission",
+      "t1": "Stratégie & Transformation",
+      "t2": "ESG & Performance Sociale",
+      "t3": "Parties prenantes, Communautés & Territoires",
+      "t4": "Leadership & Capacités",
       "t5": "Autre demande"
     },
     "submit": "Envoyer le message",

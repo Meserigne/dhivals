@@ -80,36 +80,31 @@
     "eyebrow": "Our services",
     "headline": "Turning intentions into concrete action.",
     "callout": "Dhivals supports you at every stage of your strategic journey, from initial diagnosis through to implementation and impact evaluation.",
+    "whatWeDo": "What we do",
     "items": {
       "s1": {
         "n": "01",
-        "title": "Strategy & advisory",
-        "text": "Defining and articulating your strategic vision. Issue analysis, prioritisation of actions, and a roadmap for lasting impact."
+        "title": "Strategy & Transformation",
+        "text": "We help organisations turn complex challenges into clear priorities, strategic choices and actionable roadmaps.",
+        "whatWeDo": "Strategy development · Sustainability integration · Organisational transformation · Strategic roadmaps"
       },
       "s2": {
         "n": "02",
-        "title": "Social performance & CSR",
-        "text": "Assessment of your social impact, tailored CSR policies, and measurement and reporting of performance."
+        "title": "ESG & Social Performance",
+        "text": "We help organisations strengthen how they manage environmental, social and stakeholder issues, with a focus on performance, resilience and long-term value.",
+        "whatWeDo": "ESG & sustainability strategy · Social performance · Risk & impact assessment · Performance frameworks & reporting"
       },
       "s3": {
         "n": "03",
-        "title": "Leadership & transformation",
-        "text": "Support for leaders, change management, and sustainable organisational cultures."
+        "title": "Stakeholders, Communities & Territories",
+        "text": "We help organisations build stronger relationships with stakeholders and create models of engagement and local value that support both business and territories.",
+        "whatWeDo": "Stakeholder strategy · Community engagement · Territorial anchoring · Local value creation · Social investment"
       },
       "s4": {
         "n": "04",
-        "title": "Sustainable development",
-        "text": "Design and delivery of high-impact projects. Alignment with the SDGs, green finance, and impact evaluation."
-      },
-      "s5": {
-        "n": "05",
-        "title": "Community engagement",
-        "text": "Territorial anchoring strategies and stakeholder mobilisation for inclusive growth."
-      },
-      "s6": {
-        "n": "06",
-        "title": "Training & knowledge transfer",
-        "text": "Workshops, seminars and capacity-building programmes. Skills transfer."
+        "title": "Leadership & Capability",
+        "text": "We equip leaders and teams to navigate change, make better decisions and translate strategy into action.",
+        "whatWeDo": "Executive advisory · Leadership programmes · Capacity building · Workshops & strategic facilitation"
       }
     }
   },
@@ -171,10 +166,10 @@
     "placeholderMessage": "Your message here",
     "typePlaceholder": "Select…",
     "types": {
-      "t1": "Strategy & advisory",
-      "t2": "Social performance & CSR",
-      "t3": "Sustainable development & impact",
-      "t4": "Training & knowledge transfer",
+      "t1": "Strategy & Transformation",
+      "t2": "ESG & Social Performance",
+      "t3": "Stakeholders, Communities & Territories",
+      "t4": "Leadership & Capability",
       "t5": "Other request"
     },
     "submit": "Send message",

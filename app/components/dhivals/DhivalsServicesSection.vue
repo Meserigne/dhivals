@@ -1,15 +1,21 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-const itemKeys = ['s1', 's2', 's3', 's4', 's5', 's6'] as const
+const itemKeys = ['s1', 's2', 's3', 's4'] as const
 
-type ServiceCard = { n: string; title: string; text: string }
+type ServiceCard = {
+  n: string
+  title: string
+  text: string
+  whatWeDo: string
+}
 
 const cards = computed<ServiceCard[]>(() =>
   itemKeys.map((key) => ({
     n: t(`services.items.${key}.n`),
     title: t(`services.items.${key}.title`),
     text: t(`services.items.${key}.text`),
+    whatWeDo: t(`services.items.${key}.whatWeDo`),
   })),
 )
 
@@ -109,7 +115,7 @@ onUnmounted(() => {
 
       <div
         ref="servicesGridRef"
-        class="mt-16 grid gap-6 sm:grid-cols-2 lg:mt-20 lg:grid-cols-3 lg:gap-8"
+        class="mt-16 grid gap-6 sm:grid-cols-2 lg:mt-20 lg:gap-8"
       >
         <article
           v-for="(card, index) in cards"
@@ -132,6 +138,14 @@ onUnmounted(() => {
           <p class="mt-3 text-sm leading-relaxed text-slate-600 sm:text-[0.9375rem]">
             {{ card.text }}
           </p>
+          <div class="mt-5 border-t border-slate-100 pt-4">
+            <p class="text-xs font-semibold uppercase tracking-wide text-dh-teal">
+              {{ t('services.whatWeDo') }}
+            </p>
+            <p class="mt-2 text-sm leading-relaxed text-slate-700 sm:text-[0.9375rem]">
+              {{ card.whatWeDo }}
+            </p>
+          </div>
         </article>
       </div>
     </div>
